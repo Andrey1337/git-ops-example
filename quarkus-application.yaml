@@ -4,21 +4,26 @@ metadata:
   name: example-subchart-app
   namespace: argocd
 spec:
-  project: default
-
-  source:
-    chart: quarkus
-    path: example-subchart/
-    repoURL: https://github.com/Andrey1337/git-ops-example.git
-    targetRevision: main
   destination:
+    namespace: test
     server: https://kubernetes.default.svc
-    namespace: argocd
-
+  project: default
+  source:
+    path: quarkus-subchart/
+    repoURL: https://github.com/christianh814/gitops-examples
+    targetRevision: master
+  sync:
+    comparedTo:
+      destination:
+        namespace: test
+        server: https://kubernetes.default.svc
+      source:
+        path: quarkus-subchart/
+        repoURL: https://github.com/christianh814/gitops-examples
+        targetRevision: master
   syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
     syncOptions:
       - CreateNamespace=true
-
-    automated:
-      selfHeal: true
-      prune: true

@@ -6,6 +6,6 @@ quarkus:
       enabled: false
       tls:
         enabled: true
-    replicas: 1
+      replicas: 3
   image:
     name: quay.io/ablock/gitops-helm-quarkus
