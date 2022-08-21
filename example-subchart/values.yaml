@@ -3,6 +3,7 @@ quarkus:
     enabled: false
   deploy:
     route:
+      enabled: false
       tls:
         enabled: true
     replicas: 1

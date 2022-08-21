@@ -1,18 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: quarkus-app
+  name: example-subchart-app
   namespace: argocd
 spec:
   project: default
 
   source:
+    chart: quarkus
+    path: example-subchart/
     repoURL: https://github.com/Andrey1337/git-ops-example.git
     targetRevision: main
-    path: example-subchart
   destination:
     server: https://kubernetes.default.svc
-    namespace: quarkus
+    namespace: argocd
 
   syncPolicy:
     syncOptions:
