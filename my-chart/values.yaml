@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: chentex/go-rest-api
+  repository: chentex/andy
   pullPolicy: IfNotPresent
   tag: "latest"
 
