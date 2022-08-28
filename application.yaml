@@ -7,9 +7,9 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/Andrey1337/git-ops-example.git
+    repoURL: git@github.com:Andrey1337/git-ops-example.git
     targetRevision: HEAD
-    path: dev
+    path: example-subchart
   destination:
     server: https://kubernetes.default.svc
     namespace: myapp
