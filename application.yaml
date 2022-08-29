@@ -9,7 +9,10 @@ spec:
   source:
     repoURL: git@github.com:Andrey1337/git-ops-example.git
     targetRevision: HEAD
-    path: example-subchart
+    path: my-chart
+    helm:
+      valueFiles:
+        - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: myapp

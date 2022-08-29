@@ -9,7 +9,7 @@ def hello_world():
 
 
 def main():
-    app.run('0.0.0.0', '1337')
+    app.run('0.0.0.0', '8080')
 
 
 if __name__ == '__main__':
