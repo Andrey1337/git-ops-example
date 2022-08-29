@@ -8,6 +8,11 @@ def hello_world():
     return 'Hello'
 
 
+@app.route('/test')
+def hello_world():
+    return 'Test'
+
+
 def main():
     app.run('0.0.0.0', '8080')
 
