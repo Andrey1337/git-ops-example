@@ -12,8 +12,8 @@ spec:
     path: my-chart
     helm:
       valueFiles:
+        - versions-values/version-values-test.yaml
         - values.yaml
-        - version-values-test.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: myapp
