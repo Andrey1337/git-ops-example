@@ -13,6 +13,7 @@ spec:
     helm:
       valueFiles:
         - values.yaml
+        - versions-values/version-values-test.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: myapp

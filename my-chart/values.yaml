@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: andrew1337/test-api
   pullPolicy: IfNotPresent
-  tag: "latest"
+  tag: "test"
 
 imagePullSecrets: [ ]
 nameOverride: ""

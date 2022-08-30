@@ -13,6 +13,11 @@ def test_route():
     return 'Test'
 
 
+@app.route('/andy')
+def andy_route():
+    return 'Andy'
+
+
 def main():
     app.run('0.0.0.0', '8080')
 
